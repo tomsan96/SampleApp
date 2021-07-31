@@ -1,0 +1,14 @@
+disabled_rules:
+
+
+excluded:
+- Pods/
+- Podfile
+- Podfile.lock
+- vendor/
+- SampleApp/Generated/R.generated.swift
+
+# 1行の文字数が200超えると警告、300超えるとエラーにする
+line_length:
+- 200 # warning
+- 300 # error

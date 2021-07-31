@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="4tJ-pM-VB5">
+            <objects>
+                <viewController storyboardIdentifier="Weather" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZpE-P0-WT4" customClass="WeatherViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWF-Kn-es2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天気API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUH-c7-EZH">
+                                <rect key="frame" x="176.5" y="94" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSr-Jb-Q5a">
+                                <rect key="frame" x="141.5" y="130" width="131" height="30"/>
+                                <state key="normal" title="API呼び出しボタン"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Mp-zb-9mC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yUH-c7-EZH" firstAttribute="centerX" secondItem="VWF-Kn-es2" secondAttribute="centerX" id="B4p-NW-ute"/>
+                            <constraint firstItem="yUH-c7-EZH" firstAttribute="top" secondItem="1Mp-zb-9mC" secondAttribute="top" constant="50" id="NFF-gY-Ae1"/>
+                            <constraint firstItem="pSr-Jb-Q5a" firstAttribute="top" secondItem="yUH-c7-EZH" secondAttribute="bottom" constant="15" id="XKi-F3-WiY"/>
+                            <constraint firstItem="pSr-Jb-Q5a" firstAttribute="centerX" secondItem="VWF-Kn-es2" secondAttribute="centerX" id="seB-Ql-paA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callApiButton" destination="pSr-Jb-Q5a" id="gmQ-hj-USi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSR-IT-STq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="-17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
